@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function BueStore () {
     return (
         <div className="BueStore">
-            <p>BueStore</p>
+            <Link to="/">Back</Link>
         </div>
     )
 };

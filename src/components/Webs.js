@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Webs () {
     return (
         <div className="Webs">
-            <p>Webs</p>
+            <Link to="/">Back</Link>
         </div>
     )
 };
