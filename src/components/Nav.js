@@ -3,7 +3,7 @@ import React from "react";
 export default function Nav () {
     return (
         <div className="Nav">
-            <p>Bue!</p>
+            <h1>Bue!</h1>
         </div>
     )
 };

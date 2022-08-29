@@ -1,3 +1,19 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  height: 100vh;
+}
+
+.app-nav {
+  display: flex;
+  flex: row;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  border-bottom: 1px solid darkgray;
+}
+
+.app-home {
+  height: 75vh;
 }

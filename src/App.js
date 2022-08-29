@@ -16,10 +16,12 @@ import NotFound from "./components/NotFound";
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <div className="app-nav">
+        <Nav />
+      </div>
 
       {/* RUTEO DE COMPONENTES */}
-      <div className="app-container">
+      <div className="app-home">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/webs" element={<Webs />} />

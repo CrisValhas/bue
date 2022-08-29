@@ -1,0 +1,29 @@
+.Home {
+    height: 100%;
+}
+
+.home-container {
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.home-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    height: 70%;
+    width: 20%;
+}
+
+.home-cards:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.9);
+}
