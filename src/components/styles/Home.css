@@ -1,17 +1,15 @@
 .Home {
-    height: 75vh;
+    height: 65vh;
 }
 
 .home-container {
     display: flex;
     flex: row;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
     height: 100%;
     padding-left: 5%;
     padding-right: 5%;
-    
-    
 }
 
 .home-cards {
@@ -20,9 +18,9 @@
     justify-content: center;
     text-decoration: none;
     color: black;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    height: 70%;
+    height: 85%;
     width: 20%;
     overflow: hidden;
     transform:scale(1);

@@ -11,6 +11,7 @@ import NotFound from "./NotFound";
 import Nav from "./Nav";
 
 import { AnimatePresence } from 'framer-motion';
+import Footer from "./Footer";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -26,6 +27,7 @@ function AnimatedRoutes() {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
+                <Footer />
             </AnimatePresence>
         </div>
     )
