@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 export default function Webs () {
     return (
-        <div className="Webs">
+        <motion.div className="Webs"
+        initial={{scale:0, transition:{duration:0.1}}}
+        animate={{scale:0.9}}
+        // exit={{opacity:0, transition:{duration:0.1}}}
+        >
             <Link to="/">Back</Link>
-        </div>
+        </motion.div>
     )
 };
