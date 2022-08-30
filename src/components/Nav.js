@@ -1,11 +1,13 @@
 import React from "react";
 // css
 import "./styles/Nav.css";
+
+import logo from "../assets/test-logo.png";
+
 export default function Nav () {
     return (
         <div className="Nav">
-            <div className="Nav-line"></div>
-            <h1 className="Nav-logo">Bue!</h1>
+            <img className="Nav-logo" src={logo} alt="logo" />
         </div>
     )
 };

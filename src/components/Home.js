@@ -11,7 +11,7 @@ export default function Home () {
         <motion.div className="Home"
 
         initial={{scale:0, transition:{duration:0.1}}}
-        animate={{x: 0,scale:1}}
+        animate={{x: 0,scale:1, transition:{duration:0.7}}}
         // exit={{opacity:0, transition:{duration:0.1}}}
         >
             {/* NAVEGACIÓN */}

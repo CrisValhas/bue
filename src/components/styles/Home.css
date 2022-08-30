@@ -26,20 +26,17 @@
     width: 20%;
     overflow: hidden;
     transform:scale(1);
+    font-size: x-large;
+    color: #019AFF;
 }
-.home-cardsline{
-    width:4%;
-    height: 100%;
-    background:#8ac74c;
-    border-right: solid;
-    border-width: 4px;
-    border-color: rgba(0, 0, 0, 0.805);
+
+.home-cards:hover {
+    background-color: #019AFF;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.9);
+    color: white;
 }
 
 .home-cardslabel{
     width: 95%;
-    filter: opacity(0.9);
-}
-.home-cards:hover {
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.9);
+    filter: opacity(0.9); 
 }

@@ -6,7 +6,7 @@ export default function Webs () {
     return (
         <motion.div className="Webs"
         initial={{scale:0, transition:{duration:0.1}}}
-        animate={{scale:0.9}}
+        animate={{x: 0,scale:1, transition:{duration:0.7}}}
         // exit={{opacity:0, transition:{duration:0.1}}}
         >
             <Link to="/">Back</Link>
