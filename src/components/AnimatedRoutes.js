@@ -8,6 +8,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Webs from "./Webs";
 import NotFound from "./NotFound";
+import Nav from "./Nav";
 
 import { AnimatePresence } from 'framer-motion';
 
@@ -16,6 +17,7 @@ function AnimatedRoutes() {
     return (
         <div>
             <AnimatePresence>
+                <Nav />
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Home />} />
                     <Route path="/webs" element={<Webs />} />
