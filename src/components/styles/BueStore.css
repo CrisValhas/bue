@@ -1,0 +1,44 @@
+.BueStore {
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    background-color: #019AFF;
+}
+
+.buestore-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buestore-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: green;
+    width: 65%;
+    height: 100%;
+}
+
+.buestore-title {
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.buestore-description {
+
+}
+
+.buestore-bg {
+    display: flex;
+    height: 65vh;
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.buestore-imgs {
+    width: 200px;
+    height: 200px;
+}
