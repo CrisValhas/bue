@@ -25,7 +25,8 @@
     color: #ffc401;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
-.Webs-options-container:hover{
+
+.Webs-options-container:hover {
     scale: 1.01;
     transition: .3s;
     font-size: xx-large;
@@ -43,7 +44,7 @@
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-.Webs-options-two-container:hover{
+.Webs-options-two-container:hover {
     scale: 1.01;
     transition: .3s;
     font-size: xx-large;
@@ -107,10 +108,83 @@
 .Back:hover {
     scale: 1.1
 }
-.Webs-click{
+
+.Webs-click {
     position: absolute;
     width: 100%;
     height: 65vh;
     background-color: #019AFF;
     opacity: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Webs-info {
+    padding: 30px;
+    height: 100%;
+    width: 50%;
+    margin-top:30px;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.wrapper {
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+}
+
+.wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #019AFF;
+}
+
+.wrapper .input_field {
+    margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea {
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 10px;
+}
+
+.wrapper textarea {
+    resize: none;
+    height: 80px;
+}
+
+.wrapper .btn input[type="submit"] {
+    background-color: white;
+    border: 0px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: #ffc401;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.wrapper .btn input[type="submit"]:hover {
+    scale: 1.02;
+    transition: 0.3s; 
+}
+
+#error_message {
+    margin-bottom: 20px;
+    background: #fe8b8e;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
 }
