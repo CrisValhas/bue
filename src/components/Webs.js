@@ -117,8 +117,44 @@ export default function Webs() {
                         transition={{ duration: 0.4, origin: 1 }}
                         exit={{ width: "0vw", x: "0vw", scale: 0.4 }}
                     >
+                        
+                        <motion.div className="Webs-info"
+                            initial={{ width: "0vw", x: "-90vw", scale: 1.5 }}
+                            animate={{ width: "40%", x: 0, scale: 1 }}
+                            transition={{ duration: 0.7, origin: 1 }}
+                            exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
+                        >
+                            <h1>Simple</h1>
+                            hola aca tenes la info completa de la opcion uno
+                            Es importante tener presencia en las redes, si lo que queres es que te contacten y veas quien sos o lo que haces esta es la mejor opcion por que otra por este precio igual no vas a conseguir !! 
+                            <h3>En bue! todo es posible !</h3>
+                        </motion.div>
                         <p className="Back" onClick={() => setIsOpenOne(!isOpenOne)}>X</p>
-                        hola aca tenes la info completa de la opcion uno
+                        <motion.div className="Webs-info"
+                            initial={{ width: "0vw", x: "90vw", scale: 1.5 }}
+                            animate={{ width: "40%",x:"0", scale: 1 }}
+                            transition={{ duration: 0.9, origin: 1 }}
+                        >
+                            <div class="wrapper">
+                                <h2>Contact us</h2>
+                                <div id="error_message">
+                                </div>
+                                <form action="" id="myform" onsubmit={()=>validate()}>
+                                    <div class="input_field">
+                                        <input type="text" placeholder="Name" id="name"/>
+                                    </div>
+                                    <div class="input_field">
+                                        <input type="text" placeholder="Email" id="email"/>
+                                    </div>
+                                    <div class="input_field">
+                                        <textarea placeholder="Message" id="message"></textarea>
+                                    </div>
+                                    <div class="btn">
+                                        <input type="submit"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 }
                 {
@@ -129,8 +165,44 @@ export default function Webs() {
                         transition={{ duration: 0.4, origin: 1 }}
                         exit={{ width: "0vw", x: "0vw", scale: 0.4 }}
                     >
+                        <motion.div className="Webs-info"
+                            initial={{ width: "0vw", x: "-90vw", scale: 1.5 }}
+                            animate={{ width: "40%", x: 0, scale: 1 }}
+                            transition={{ duration: 0.7, origin: 1 }}
+                            exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
+                        >
+                            <h1>Medium</h1>
+                            hola aca tenes la info completa de la opcion dos
+                            no aca te caes de culo si la simple te gusto aca podes incorporar un backend y hacer las locuras que se te ocurran , mandale mail o notificaciones a tus amigos cada 5 minutos o pedinos tu pagina web personal donde subir ttus fotos y videos ,crear usuarios. La timba mas chica que te armas te duerme
+                            <h3>En bue! todo es posible !</h3>
+                        </motion.div>
                         <p className="Back" onClick={() => setIsOpenTwo(!isOpenTwo)}>X</p>
-                        hola aca tenes la info completa de la opcion dos
+                        <motion.div className="Webs-info"
+                            initial={{ width: "0vw", x: "90vw", scale: 1.5 }}
+                            animate={{ width: "40%",x:"0", scale: 1 }}
+                            transition={{ duration: 0.9, origin: 1 }}
+                        >
+                            <div class="wrapper">
+                                <h2>Contact us</h2>
+                                <div id="error_message">
+
+                                </div>
+                                <form action="" id="myform" onsubmit={()=>validate()}>
+                                    <div class="input_field">
+                                        <input type="text" placeholder="Name" id="name"/>
+                                    </div>
+                                    <div class="input_field">
+                                        <input type="text" placeholder="Email" id="email"/>
+                                    </div>
+                                    <div class="input_field">
+                                        <textarea placeholder="Message" id="message"></textarea>
+                                    </div>
+                                    <div class="btn">
+                                        <input type="submit"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 }
                 {
