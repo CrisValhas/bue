@@ -10,9 +10,9 @@ export default function Home () {
     return (
         <motion.div className="Home"
 
-        initial={{scale:0, transition:{duration:0.1}}}
-        animate={{x: 0,scale:1, transition:{duration:0.7}}}
-        // exit={{opacity:0, transition:{duration:0.1}}}
+        initial={{ width: "0vw", x: "50vw", opacity:0,scale: 0.8,transition:{duration:1.3} }}
+        animate={{ width: "100vw", x: "0vw", scale: 1,opacity:1, transition:{duration:1.3}}}
+        exit={{ width: "0vw", x: "50vw",opacity:0, scale: 0.8 ,transition:{duration:0.5}}}
         >
             {/* NAVEGACIÓN */}
             <div className="home-container">
