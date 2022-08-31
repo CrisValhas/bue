@@ -17,7 +17,7 @@ export default function BueStore () {
         <motion.div className="BueStore"
             initial={{ width: "0vw", x: "50vw", opacity: 0, transition: { duration: 1.3 } }}
             animate={{ width: "100vw", x: "0vw", scale: 1, opacity: 1, transition: { duration: 1.3 } }}
-            exit={{ width: "0vw", x: "50vw", opacity: 0, transition: { duration: 0.5 } }}
+            exit={{ width: "0vw", x: "50vw", opacity: 0, transition: { duration: .3 } }}
         >
 
             <div className="buestore-content">
@@ -28,7 +28,7 @@ export default function BueStore () {
                     <div className="buestore-description">
                         <span>Potente y fácil de usar. Sin gastos y no es necesario configurarlo. No se necesita tarjeta de crédito. Configura tu cuenta gratuita una vez y mantenla todo el tiempo que quieras. Exactamente lo que se supone que significa "gratis".</span>
                     </div>
-                    <button className="buestore-btn">Ir a TiendaBue!</button>
+                    <button className="buestore-btn" onClick={() => alert('Proximamente')}>Ir a TiendaBue!</button>
                 </div>
 
                 
