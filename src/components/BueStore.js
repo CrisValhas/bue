@@ -11,6 +11,9 @@ import { motion } from 'framer-motion';
 import store from "../assets/bue-store/store-2017.png";
 import sales from "../assets/bue-store/price-tag-2320.png";
 import supp from "../assets/bue-store/customer-support-12581.png";
+import lock from "../assets/bue-store/login-password-11923.png";
+import cash from "../assets/bue-store/coin-794.png";
+import box from "../assets/bue-store/box-9153.png";
 
 export default function BueStore () {
     return (
@@ -22,6 +25,7 @@ export default function BueStore () {
 
             <div className="buestore-content">
                 
+                {/* TEXT */}
                 <div className="buestore-text">
                     <Link className="buestore-links" to="/">←</Link>
                     <span className="buestore-title">Empieza a vender <span style={{textDecoration: "underline", textDecorationColor: "#ffc401"}}>gratis</span></span>
@@ -31,9 +35,8 @@ export default function BueStore () {
                     <button className="buestore-btn" onClick={() => alert('Proximamente')}>Ir a TiendaBue!</button>
                 </div>
 
-                
+                {/* BOXES */}
                 <div className="buestore-boxes">
-
                     <div className="buestore-box">
                         <img className="buestore-imgs" src={store} alt="store" />
                         <div className="buestore-box-info">
@@ -57,7 +60,23 @@ export default function BueStore () {
                             <span className="buestore-box-label">Brindamos soporte ante cualquier eventualidad.</span>
                         </div>
                     </div>
-                    
+                </div>
+
+                {/* END */}
+                <div className="buestore-end">
+                    <div className="buestore-end-text">
+                        <span style={{fontSize: "50px", fontFamily: "Impact", color: "white"}}>60 días</span>  
+                        <span style={{fontSize: "50px", fontFamily: "Impact", color: "#ffc401", marginTop: "-15px"}}>sin costo</span>
+                        <div className="buestore-end-description">
+                            <span>Si es la primera vez que creas una cuenta en nuestra tienda te regalamos los primeros 60 días del servicio.</span>
+                            <span>Familiarizate con nuestra app sin costo alguno, sabemos que luego de este tiempo, te vas a quedar!</span>
+                        </div>
+                    </div>
+                    <div className="buestore-bg-icons">
+                        <img className="buestore-bg-img" src={box} alt="box" />
+                        <img className="buestore-bg-img" src={cash} alt="cash" />
+                        <img className="buestore-bg-img" src={lock} alt="lock" />
+                    </div>  
                 </div>
                 
                 
