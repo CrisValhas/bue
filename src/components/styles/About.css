@@ -1,8 +1,10 @@
 .About {
-    /* background: linear-gradient(180deg, #ffffff 0%, #019AFF 100%); */
-    /* background: #019AFF; */
+    display: flex;
+    justify-content: center;
     width: 100vw;
     height: 65vh;
+    background-color: #019AFF;
+    background: linear-gradient(to bottom, #0167ff, #019AFF);
 }
 .About-box {
     width: fit-content;
@@ -12,7 +14,6 @@
     align-items: center;
     justify-content: center;
     float: left;
-    
 }
 .About-text {
     padding: 10px;
@@ -36,5 +37,27 @@
 
 button {
   background: none;
-    border: none;
+  border: none;
+}
+.About-dashboard-text {
+    display: flex;
+    justify-content: center;
+}
+
+.Back {
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #019AFF;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-style: double; 
+    margin-top: 20px;
+}
+
+.Back:hover {
+    scale: 1.1
 }
