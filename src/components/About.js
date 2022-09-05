@@ -54,18 +54,16 @@ function BoxText({ text, drop, arrayToRender }) {
 
 export default function About() {
   let stringAbout =
-      "Somos un equipo que crea aplicaciones modernas e intuitivas usando las tecnologías más demandadas del mercado. En Bue! Desarrollamos tu idea. Buenas apps, buenos momentos.",
-    stringAbout1 = "tu idea. crea momentos.",
-    stringAbout2 = "Somos más que un equipo",
-    stringAbout3 = "Desarrollamos más que aplicaciones",
-    stringAbout4 = "crea apps, intuitivas";
+      "Somos un equipo que crea aplicaciones modernas e intuitivas usando las tecnologías más demandadas del mercado. En Bue! desarrollamos tu idea. Buenas apps, buenos momentos.",
+    stringAbout1 = "Somos más que un equipo",
+    stringAbout2 = "desarrollamos más que aplicaciones",
+    stringAbout3 = "Bue! crea apps, intuitivas";
   let arrayAbout = stringAbout.split(" ");
   let arrayAbout1 = stringAbout1.split(" ");
   let arrayAbout2 = stringAbout2.split(" ");
   let arrayAbout3 = stringAbout3.split(" ");
-  let arrayAbout4 = stringAbout4.split(" ");
 
-  let allPhrases = [arrayAbout1, arrayAbout2, arrayAbout3, arrayAbout4];
+  let allPhrases = [arrayAbout1, arrayAbout2, arrayAbout3];
 
   let [count, setCount] = useState(0);
   const [arrayToRender, setArrayToRender] = useState(allPhrases[count]);
@@ -77,10 +75,10 @@ export default function About() {
       setDrop(!drop);
     }
     if (drop) {
-      if (count < 4) {
+      if (count < 3) {
         setCount(++count);
       }
-      if (count === 3) {
+      if (count === 2) {
         setCount(0);
       }
       setArrayToRender(allPhrases[count]);

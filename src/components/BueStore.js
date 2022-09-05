@@ -30,7 +30,7 @@ export default function BueStore () {
                     <Link className="buestore-links" to="/">←</Link>
                     <span className="buestore-title">Empieza a vender <span style={{textDecoration: "underline", textDecorationColor: "#ffc401"}}>gratis</span></span>
                     <div className="buestore-description">
-                        <span>Potente y fácil de usar. Sin gastos y no es necesario configurarlo. No se necesita tarjeta de crédito. Configura tu cuenta gratuita una vez y mantenla todo el tiempo que quieras. Exactamente lo que se supone que significa "gratis".</span>
+                        <span>Sin comisiones por venta. Sin costo mensual.<br/> No se necesita tarjeta de crédito. <br/> Tu tienda en el catálogo de Bue! nuestro shopping-online. <br/> ¡Publicidad gratis!</span>
                     </div>
                     <button className="buestore-btn" onClick={() => alert('Proximamente')}>Ir a TiendaBue!</button>
                 </div>
@@ -48,8 +48,8 @@ export default function BueStore () {
                     <div className="buestore-box">
                         <img className="buestore-imgs" src={sales} alt="store" />
                         <div className="buestore-box-info">
-                            <span className="buestore-box-title">Vende sin comisiones</span>
-                            <span className="buestore-box-label">Único plan, todo incluído, no cobramos comisiones por las ventas.</span>
+                            <span className="buestore-box-title">Gratis para siempre</span>
+                            <span className="buestore-box-label">Todo incluído, no cobramos comisiones por las ventas.</span>
                         </div>
                     </div>
 
@@ -65,11 +65,14 @@ export default function BueStore () {
                 {/* END */}
                 <div className="buestore-end">
                     <div className="buestore-end-text">
-                        <span style={{fontSize: "50px", fontFamily: "Impact", color: "white"}}>60 días</span>  
+                        <span style={{fontSize: "50px", fontFamily: "Impact", color: "white"}}>Tu tienda</span>  
                         <span style={{fontSize: "50px", fontFamily: "Impact", color: "#ffc401", marginTop: "-15px"}}>sin costo</span>
                         <div className="buestore-end-description">
-                            <span>Si es la primera vez que creas una cuenta en nuestra tienda te regalamos los primeros 60 días del servicio.</span>
-                            <span>Familiarizate con nuestra app sin costo alguno, sabemos que luego de este tiempo, te vas a quedar!</span>
+                            <span>Si es la primera vez que creas una cuenta en nuestra tienda te regalamos imágenes para que puedas promocionar tu tienda en tus redes sociales.</span>
+                            <br/>
+                            <span>Familiarizate con nuestra app, 
+                            <br/>
+                                sabemos que te vas a quedar!</span>
                         </div>
                     </div>
                     <div className="buestore-bg-icons">
