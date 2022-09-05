@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import "./styles/Webs.css"
 import { useState } from "react";
-import gbottom from "../assets/webs-media/globos-bottom.png"
-import gmid from "../assets/webs-media/globos-mid.png"
-import gtop from "../assets/webs-media/globos-top.png"
 
 export default function Webs() {
     const [isOpenOne, setIsOpenOne] = useState(false)
@@ -73,7 +70,7 @@ export default function Webs() {
                         {/* <img className="webs-img" src={gtop} alt="gtop"/> */}
                         <p>Son paginas web de estilo portfolio o contacto, sirven para que la gente te conozca, a vos o tu proyecto y pueda contactarte. Generar presencia en la Web es importante!</p>
                     </div>
-                    <p>Simple</p>
+                    <p style={{ fontFamily: "Impact", fontSize: "25px"}} >Simple</p>
                     {/* <motion.div className="Webs-icon"
                         initial={{ width: "0vw", x: 0, scale: 1.5 }}
                         animate={{ width: "16%", x: 0, }}
@@ -91,9 +88,9 @@ export default function Webs() {
                 >
                     <div className="Webs-options-two">
                         {/* <img className="webs-img" src={gmid} alt="gmid"/> */}
-                        <p>Una pagina web completisima! con mails, posibilidad qu</p>
+                        <p>¡Tu pagina web completisima! Te ofrecemos diez e-mails, posibilidad de montar una tienda online, galeria virtual, blog y similares donde podés subir material digital a tu página. ¡Todas tus ideas son valiosas!</p>
                     </div>
-                    <p>Medium</p>
+                    <p style={{ fontFamily: "Impact", fontSize: "25px"}} >Intermedio</p>
                 </motion.div>
                 {/* ------------------------------option 3---------------------------------- */}
                 <motion.div onClick={() => setIsOpenTree(!isOpenTree)} className="Webs-options-container"
@@ -105,9 +102,9 @@ export default function Webs() {
                     {/* <img className="webs-img" src={gbottom} alt="gbottom"/> */}
                     <div className="Webs-options">
 
-                        <p>hola jorgue como estas</p>
+                        <p>La aplicacion web para tu emprendimiento o empresa, en base a tus necesidades.</p>
                     </div>
-                    <p >Advanced</p>
+                    <p style={{ fontFamily: "Impact", fontSize: "25px"}} >Avanzado</p>
                 </motion.div>
                 {
                     isOpenOne &&
@@ -124,10 +121,14 @@ export default function Webs() {
                             transition={{ duration: 0.7, origin: 1 }}
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
-                            <h1>Simple</h1>
-                            hola aca tenes la info completa de la opcion uno
-                            Es importante tener presencia en las redes, si lo que queres es que te contacten y veas quien sos o lo que haces esta es la mejor opcion por que otra por este precio igual no vas a conseguir !! 
-                            <h3>En bue! todo es posible !</h3>
+                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Simple</p>
+                            <ul style={{ listStyle: 'none', fontSize: "20px"}}>
+                                <li>Elige las tres secciones mas relevantes para tu web.</li>
+                                <li>Incluye por un año hosting, dominio (.com, .com.ar, etc) y certificado SSL.</li>
+                                <li>Diseño y desarrollo de acuerdo a tus necesidades. </li>
+                                <li>Adaptable para cualquier dispositivo. </li>
+                            </ul>
+                            <h3 style={{ color: "#ffc401"}} >Sin costo mensual</h3>
                         </motion.div>
                         <p className="Back" onClick={() => setIsOpenOne(!isOpenOne)}>X</p>
                         <motion.div className="Webs-info"
@@ -136,18 +137,18 @@ export default function Webs() {
                             transition={{ duration: 0.9, origin: 1 }}
                         >
                             <div class="wrapper">
-                                <h2>Contact us</h2>
+                                <h2>Pide tu presupuesto</h2>
                                 <div id="error_message">
                                 </div>
                                 <form action="" id="myform" onsubmit={()=>validate()}>
                                     <div class="input_field">
-                                        <input type="text" placeholder="Name" id="name"/>
+                                        <input type="text" placeholder="Nombre" id="name"/>
                                     </div>
                                     <div class="input_field">
                                         <input type="text" placeholder="Email" id="email"/>
                                     </div>
                                     <div class="input_field">
-                                        <textarea placeholder="Message" id="message"></textarea>
+                                        <textarea placeholder="Mensaje" id="message"></textarea>
                                     </div>
                                     <div class="btn">
                                         <input type="submit"/>
@@ -171,10 +172,14 @@ export default function Webs() {
                             transition={{ duration: 0.7, origin: 1 }}
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
-                            <h1>Medium</h1>
-                            hola aca tenes la info completa de la opcion dos
-                            no aca te caes de culo si la simple te gusto aca podes incorporar un backend y hacer las locuras que se te ocurran , mandale mail o notificaciones a tus amigos cada 5 minutos o pedinos tu pagina web personal donde subir ttus fotos y videos ,crear usuarios. La timba mas chica que te armas te duerme
-                            <h3>En bue! todo es posible !</h3>
+                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Intermedio</p>
+                            <ul style={{ listStyle: 'none', fontSize: "20px"}}>
+                                <li>Incorporamos un servidor para que puedas guardar información online.</li>
+                                <li>Mandar mails o notificaciones.</li>
+                                <li>Tu pagina web personal donde subir tus fotos y videos, crear usuarios.</li>
+                                <li>Podés realizar hasta 3 cambios en la pagina durante el mes.</li>
+                            </ul>
+                            <h3 style={{ color: "#ffc401"}} > Costo mensual a partir de $1200</h3>
                         </motion.div>
                         <p className="Back" onClick={() => setIsOpenTwo(!isOpenTwo)}>X</p>
                         <motion.div className="Webs-info"
@@ -220,11 +225,14 @@ export default function Webs() {
                             transition={{ duration: 0.7, origin: 1 }}
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
-                            <h1>Advanced</h1>
-                            hola aca tenes la info completa de la opcion tres
-                            porque aca podes hacer un monton de cosas que ni sabias que querias?.
-                            desde una app para buscar a tu mascota, una red social nueva o hasta una aplicacion para controlar tu industria.
-                            <h3>En bue! todo es posible !</h3>
+                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Avanzado</p>
+                            <ul style={{ listStyle: 'none', fontSize: "20px"}}>
+                                <li>Podrás gestionar (material digital, stock de la página) desde un panel de administrador.</li>
+                                <li>Soporte técnito 24/7.</li>
+                                <li>Registro, gestion de privilegios de usuarios (posibilidad de agregar vendedores, encargados, etc).</li>
+                                <li>Con las funcionalidades que tu empresa necesite, no dudes en consultar.</li>
+                            </ul>
+                            <h3 style={{ color: "#ffc401"}} >Costo mensual a partir de $12000</h3>
                         </motion.div>
                         <p className="Back" onClick={() => setIsOpenTree(!isOpenTree)}>X</p>
                         <motion.div className="Webs-info"
