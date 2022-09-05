@@ -1,0 +1,40 @@
+.About {
+    /* background: linear-gradient(180deg, #ffffff 0%, #019AFF 100%); */
+    /* background: #019AFF; */
+    width: 100vw;
+    height: 65vh;
+}
+.About-box {
+    width: fit-content;
+    height: 40px; 
+    color: #019AFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    
+}
+.About-text {
+    padding: 10px;
+    font-weight: bold;
+}
+.About-dashboard {  
+  position: absolute;
+  width: 64vh;
+  height: 300px;
+  border-radius: 5px;
+  top: calc(50% - 150px);
+  left: calc(42% - 150px);
+  position: fixed;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.About-dashboard:hover {
+    cursor: pointer;
+}
+
+button {
+  background: none;
+    border: none;
+}
