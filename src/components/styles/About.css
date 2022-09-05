@@ -1,0 +1,63 @@
+.About {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 65vh;
+    background-color: #019AFF;
+    background: linear-gradient(to bottom, #0167ff, #019AFF);
+}
+.About-box {
+    width: fit-content;
+    height: 40px; 
+    color: #019AFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+.About-text {
+    padding: 10px;
+    font-weight: bold;
+}
+.About-dashboard {  
+  position: absolute;
+  width: 64vh;
+  height: 300px;
+  border-radius: 5px;
+  top: calc(50% - 150px);
+  left: calc(42% - 150px);
+  position: fixed;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.About-dashboard:hover {
+    cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+}
+.About-dashboard-text {
+    display: flex;
+    justify-content: center;
+}
+
+.Back {
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #019AFF;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-style: double; 
+    margin-top: 20px;
+}
+
+.Back:hover {
+    scale: 1.1
+}
