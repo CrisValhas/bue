@@ -60,7 +60,6 @@ export default function Webs() {
         <motion.div className="Webs"
             initial={{ color: "white", width: "0vw", x: "50vw", opacity: 0, scale: 0.8, transition: { duration: 1.3 } }}
             animate={{ width: "100vw", x: "0vw", scale: 1, opacity: 1, transition: { duration: 1.3 } }}
-            exit={{ width: "0vw", x: "50vw", opacity: 0, scale: 0.8, transition: { duration: 0.5 } }}
         >
             <div className="Webs-container">
                 <div className="webs-container-back">
