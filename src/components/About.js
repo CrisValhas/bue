@@ -9,18 +9,19 @@ function BoxText({ text, drop, arrayToRender }) {
       {arrayToRender.includes(text) ? (
         <motion.div
           className="About-box"
-          initial={{ y: 0 }}
+          initial={{ y: 0, scale: 1 }}
           animate={
             drop
               ? {
                   y: 150,
-                  transition: { duration: Math.random() * 2 },
+                  transition: { duration: 1 },
                   opacity: 0,
+                  scale: 1.5,
                 }
               : {
                   y: 0,
                   x: 0,
-                  transition: { duration: Math.random() * 2 },
+                  transition: { duration: 1 },
                 }
           }
           drag
@@ -28,7 +29,7 @@ function BoxText({ text, drop, arrayToRender }) {
             top: -300,
             left: -600,
             right: 500,
-            bottom: 480,
+            bottom: 200,
           }}
         >
           <p className="About-text"> {text} </p>
@@ -42,7 +43,7 @@ function BoxText({ text, drop, arrayToRender }) {
             top: -300,
             left: -600,
             right: 500,
-            bottom: 480,
+            bottom: 200,
           }}
         >
           <p className="About-text"> {text} </p>
@@ -57,6 +58,7 @@ export default function About() {
       "Somos un equipo que crea aplicaciones modernas e intuitivas usando las tecnologías más demandadas del mercado. En Bue! desarrollamos tu idea. Buenas apps, buenos momentos.",
     stringAbout1 = "Somos más que un equipo",
     stringAbout2 = "desarrollamos más que aplicaciones",
+    stringAbout4 = "Desarrollamos más que aplicaciones",
     stringAbout3 = "Bue! crea apps, intuitivas";
   let arrayAbout = stringAbout.split(" ");
   let arrayAbout1 = stringAbout1.split(" ");
@@ -64,9 +66,11 @@ export default function About() {
   let arrayAbout3 = stringAbout3.split(" ");
 
   let allPhrases = [arrayAbout1, arrayAbout2, arrayAbout3];
+  let allPhrasesToRender = [stringAbout1, stringAbout4, stringAbout3];
 
   let [count, setCount] = useState(0);
-  const [arrayToRender, setArrayToRender] = useState(allPhrases[count]);
+  const [arrayToMap, setArrayToMap] = useState(allPhrases[count]);
+  const [arrayToRender, setArrayToRender] = useState(allPhrasesToRender[count]);
   const [drop, setDrop] = useState(false);
 
   const handleClick = (e) => {
@@ -79,9 +83,10 @@ export default function About() {
         setCount(++count);
       }
       if (count === 2) {
-        setCount(0);
+        setCount(-1);
       }
-      setArrayToRender(allPhrases[count]);
+      setArrayToMap(allPhrases[count]);
+      setArrayToRender(allPhrasesToRender[count]);
       setDrop(!drop);
     }
   };
@@ -93,7 +98,13 @@ export default function About() {
       initial={{ scale: 0, transition: { duration: 0.1 } }}
       animate={{ x: 0, scale: 1, transition: { duration: 0.7 } }}
     >
-      <button onClick={(e) => handleClick(e)}>
+      <div style={{ display: 'flex', justifyContent: 'flex-start', width: '54%', marginBottom: '50px'}}>
+        <Link className="buestore-links" to="/">
+          ←
+        </Link>
+      </div>
+
+      <div style={{ display: 'flex', justifyContent: 'flex-start', width: '54%'}} onClick={(e) => handleClick(e)}>
         <motion.div className={"About-dashboard"}>
           {arrayAbout?.map((world, indice) => {
             random = !random;
@@ -102,16 +113,54 @@ export default function About() {
                 text={world}
                 key={indice}
                 drop={drop}
-                arrayToRender={arrayToRender}
+                arrayToRender={arrayToMap}
               />
             );
           })}
-          <motion.div className={"About-dashboard-text"} >{drop? arrayToRender : null}</motion.div>
+          <motion.div className={"About-dashboard-text-box"}>
+            {drop ? (
+              <motion.div className="About-dashboard-text">
+                <motion.div
+                  initial={{
+                    fontFamily: "Calibri",
+                    width: "100%",
+                    y: "-10vw",
+                    scale: 1,
+                    opacity: 0,
+                    color: "#ffffff",
+                    fontSize: "35px",
+                  }}
+                  animate={{
+                    width: "100%",
+                    y: "0",
+                    scale: 1.2,
+                    opacity: 1,
+                    color: "#ffffff",
+                    fontWeight: "bold",
+                  }}
+                  transition={{ duration: 1.1, origin: 1 }}
+                >
+                  {arrayToRender}
+                </motion.div>
+              </motion.div>
+            ) : (
+              <motion.div
+                className="About-dashboard-text-descubre"
+                initial={{
+                  fontFamily: "Impact",
+                  color: "#ffc401",
+                  fontSize: "50px",
+                  scale: 1,
+                }}
+                animate={{ scale: 1.3 }}
+                transition={{ duration: 0.5, origin: 1 }}
+              >
+                Descubre
+              </motion.div>
+            )}
+          </motion.div>
         </motion.div>
-      </button>
-      <Link className="Back" to="/">
-        Back
-      </Link>
+      </div>
     </motion.div>
   );
 }
