@@ -7,7 +7,24 @@
     border: 0px;
 }
 
-.Nav-logo{
-    /* background-color: #FFDF1F; */
+.nav-container-motion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-logo{
     border-radius: 10px;
+}
+
+.nav-lang-icons {
+    height: 30px;
+    width: 30px;
+}
+
+.nav-lang-icons:hover {
+    border-radius: 50%;
+    border: 1px solid #ffc401;
 }

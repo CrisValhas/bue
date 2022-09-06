@@ -15,7 +15,14 @@ import lock from "../assets/bue-store/login-password-11923.png";
 import cash from "../assets/bue-store/coin-794.png";
 import box from "../assets/bue-store/box-9153.png";
 
+// language
+import { useSelector } from "react-redux";
+import { ESP } from "../lang/esp";
+import { ENG } from "../lang/eng";
+
 export default function BueStore () {
+    const lang = useSelector((state) => state.rootReducer.lang);
+
     return (
         <motion.div className="BueStore"
             initial={{ width: "0vw", x: "50vw", opacity: 0, transition: { duration: 1.3 } }}
@@ -28,11 +35,11 @@ export default function BueStore () {
                 {/* TEXT */}
                 <div className="buestore-text">
                     <Link className="buestore-links" to="/">←</Link>
-                    <span className="buestore-title">Empieza a vender <span style={{textDecoration: "underline", textDecorationColor: "#ffc401"}}>gratis</span></span>
+                    <span className="buestore-title">{lang === "ESP" ? ESP.BueStore.title : ENG.BueStore.title} <span style={{textDecoration: "underline", textDecorationColor: "#ffc401"}}>{lang === "ESP" ? ESP.BueStore.titleFree : ENG.BueStore.titleFree}</span></span>
                     <div className="buestore-description">
-                        <span>Sin comisiones por venta. Sin costo mensual.<br/> No se necesita tarjeta de crédito. <br/> Tu tienda en el catálogo de Bue! nuestro shopping-online. <br/> ¡Publicidad gratis!</span>
+                        <span>{lang === "ESP" ? ESP.BueStore.description : ENG.BueStore.description}</span>
                     </div>
-                    <button className="buestore-btn" onClick={() => alert('Proximamente')}>Ir a TiendaBue!</button>
+                    <button className="buestore-btn" onClick={() => alert('Proximamente')}>{lang === "ESP" ? ESP.BueStore.button : ENG.BueStore.button}</button>
                 </div>
 
                 {/* BOXES */}
@@ -40,24 +47,24 @@ export default function BueStore () {
                     <div className="buestore-box">
                         <img className="buestore-imgs" src={store} alt="store" />
                         <div className="buestore-box-info">
-                            <span className="buestore-box-title">Personaliza tu tienda</span>
-                            <span className="buestore-box-label">Pon tu logo, combina colores y adapta la web de manera fácil.</span>
+                            <span className="buestore-box-title">{lang === "ESP" ? ESP.BueStore.box[1].title : ENG.BueStore.box[1].title}</span>
+                            <span className="buestore-box-label">{lang === "ESP" ? ESP.BueStore.box[1].text : ENG.BueStore.box[1].text}</span>
                         </div>
                     </div>
 
                     <div className="buestore-box">
                         <img className="buestore-imgs" src={sales} alt="store" />
                         <div className="buestore-box-info">
-                            <span className="buestore-box-title">Gratis para siempre</span>
-                            <span className="buestore-box-label">Todo incluído, no cobramos comisiones por las ventas.</span>
+                            <span className="buestore-box-title">{lang === "ESP" ? ESP.BueStore.box[2].title : ENG.BueStore.box[2].title}</span>
+                            <span className="buestore-box-label">{lang === "ESP" ? ESP.BueStore.box[2].text : ENG.BueStore.box[2].text}</span>
                         </div>
                     </div>
 
                     <div className="buestore-box">
                         <img className="buestore-imgs" src={supp} alt="store" />
                         <div className="buestore-box-info">
-                            <span className="buestore-box-title">Soporte</span>
-                            <span className="buestore-box-label">Brindamos soporte ante cualquier eventualidad.</span>
+                            <span className="buestore-box-title">{lang === "ESP" ? ESP.BueStore.box[3].title : ENG.BueStore.box[3].title}</span>
+                            <span className="buestore-box-label">{lang === "ESP" ? ESP.BueStore.box[3].text : ENG.BueStore.box[3].text}</span>
                         </div>
                     </div>
                 </div>
@@ -65,14 +72,13 @@ export default function BueStore () {
                 {/* END */}
                 <div className="buestore-end">
                     <div className="buestore-end-text">
-                        <span style={{fontSize: "50px", fontFamily: "Impact", color: "white"}}>Tu tienda</span>  
-                        <span style={{fontSize: "50px", fontFamily: "Impact", color: "#ffc401", marginTop: "-15px"}}>sin costo</span>
+                        <span style={{fontSize: "50px", fontFamily: "Impact", color: "white"}}>{lang === "ESP" ? ESP.BueStore.extra.title : ENG.BueStore.extra.title}</span>  
+                        <span style={{fontSize: "50px", fontFamily: "Impact", color: "#ffc401", marginTop: "-15px"}}>{lang === "ESP" ? ESP.BueStore.extra.subtitle : ENG.BueStore.extra.subtitle}</span>
                         <div className="buestore-end-description">
-                            <span>Si es la primera vez que creas una cuenta en nuestra tienda te regalamos imágenes para que puedas promocionar tu tienda en tus redes sociales.</span>
+                            <span>{lang === "ESP" ? ESP.BueStore.extra.description[1] : ENG.BueStore.extra.description[1]}</span>
                             <br/>
-                            <span>Familiarizate con nuestra app, 
-                            <br/>
-                                sabemos que te vas a quedar!</span>
+                            <span>{lang === "ESP" ? ESP.BueStore.extra.description[2] : ENG.BueStore.extra.description[2]}</span>
+                            <span>{lang === "ESP" ? ESP.BueStore.extra.description[3] : ENG.BueStore.extra.description[3]}</span>
                         </div>
                     </div>
                     <div className="buestore-bg-icons">

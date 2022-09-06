@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import "./styles/Webs.css"
-import { useState } from "react";
+
+// language
+import { ESP } from "../lang/esp";
+import { ENG } from "../lang/eng";
 
 export default function Webs() {
+    const lang = useSelector((state) => state.rootReducer.lang);
+
     const [isOpenOne, setIsOpenOne] = useState(false)
     const [isOpenTwo, setIsOpenTwo] = useState(false)
     const [isOpenTree, setIsOpenTree] = useState(false)
@@ -71,9 +77,9 @@ export default function Webs() {
                 >
                     <div className="Webs-options">
                         {/* <img className="webs-img" src={gtop} alt="gtop"/> */}
-                        <p>Son paginas web de estilo portfolio o contacto, sirven para que la gente te conozca, a vos o tu proyecto y pueda contactarte. Generar presencia en la Web es importante!</p>
+                        <p>{lang === "ESP" ? ESP.Webs.simple.text : ENG.Webs.simple.text}</p>
                     </div>
-                    <p style={{ fontFamily: "Impact", fontSize: "25px"}} >Simple</p>
+                    <p style={{ fontFamily: "Impact", fontSize: "25px"}}>{lang === "ESP" ? ESP.Webs.simple.label : ENG.Webs.simple.label}</p>
                     {/* <motion.div className="Webs-icon"
                         initial={{ width: "0vw", x: 0, scale: 1.5 }}
                         animate={{ width: "16%", x: 0, }}
@@ -91,9 +97,9 @@ export default function Webs() {
                 >
                     <div className="Webs-options-two">
                         {/* <img className="webs-img" src={gmid} alt="gmid"/> */}
-                        <p>¡Tu pagina web completisima! Te ofrecemos diez e-mails, posibilidad de montar una tienda online, galeria virtual, blog y similares donde podés subir material digital a tu página. ¡Todas tus ideas son valiosas!</p>
+                        <p>{lang === "ESP" ? ESP.Webs.intermediate.text : ENG.Webs.intermediate.text}</p>
                     </div>
-                    <p style={{ fontFamily: "Impact", fontSize: "25px"}} >Intermedio</p>
+                    <p style={{ fontFamily: "Impact", fontSize: "25px"}}>{lang === "ESP" ? ESP.Webs.intermediate.label : ENG.Webs.intermediate.label}</p>
                 </motion.div>
                 {/* ------------------------------option 3---------------------------------- */}
                 <motion.div onClick={() => setIsOpenTree(!isOpenTree)} className="Webs-options-container"
@@ -105,9 +111,9 @@ export default function Webs() {
                     {/* <img className="webs-img" src={gbottom} alt="gbottom"/> */}
                     <div className="Webs-options">
 
-                        <p>La aplicacion web para tu emprendimiento o empresa, en base a tus necesidades.</p>
+                        <p>{lang === "ESP" ? ESP.Webs.advanced.text : ENG.Webs.advanced.text}</p>
                     </div>
-                    <p style={{ fontFamily: "Impact", fontSize: "25px"}} >Avanzado</p>
+                    <p style={{ fontFamily: "Impact", fontSize: "25px"}}>{lang === "ESP" ? ESP.Webs.advanced.label : ENG.Webs.advanced.label}</p>
                 </motion.div>
                 {
                     isOpenOne &&
@@ -125,14 +131,14 @@ export default function Webs() {
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
                             <p className="webs-back" onClick={() => setIsOpenOne(!isOpenOne)}>←</p>
-                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Simple</p>
+                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>{lang === "ESP" ? ESP.Webs.simple.label : ENG.Webs.simple.label}</p>
                             <ul style={{ listStyle: 'none', fontSize: "20px"}}>
-                                <li>Elige las tres secciones mas relevantes para tu web.</li>
-                                <li>Incluye por un año hosting, dominio (.com, .com.ar, etc) y certificado SSL.</li>
-                                <li>Diseño y desarrollo de acuerdo a tus necesidades. </li>
-                                <li>Adaptable para cualquier dispositivo. </li>
+                                <li>{lang === "ESP" ? ESP.Webs.simple.description[1] : ENG.Webs.simple.description[1]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.simple.description[2] : ENG.Webs.simple.description[2]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.simple.description[3] : ENG.Webs.simple.description[3]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.simple.description[4] : ENG.Webs.simple.description[4]}</li>
                             </ul>
-                            <h3 style={{ color: "#ffc401"}} >Sin costo mensual</h3>
+                            <h3 style={{ color: "#ffc401"}} >{lang === "ESP" ? ESP.Webs.simple.description.price : ENG.Webs.simple.description.price}</h3>
                         </motion.div>
                         <motion.div className="Webs-info"
                             initial={{ width: "0vw", x: "90vw", scale: 1.5 }}
@@ -140,21 +146,22 @@ export default function Webs() {
                             transition={{ duration: 0.9, origin: 1 }}
                         >
                             <div class="wrapper">
-                                <h2>Pide tu presupuesto</h2>
+                                <h2>{lang === "ESP" ? ESP.Webs.contact.title : ENG.Webs.contact.title}</h2>
                                 <div id="error_message">
+
                                 </div>
                                 <form action="" id="myform" onsubmit={()=>validate()}>
                                     <div class="input_field">
-                                        <input type="text" placeholder="Nombre" id="name"/>
+                                        <input type="text" placeholder={lang === "ESP" ? ESP.Webs.contact.name : ENG.Webs.contact.name} id="name"/>
                                     </div>
                                     <div class="input_field">
-                                        <input type="text" placeholder="Email" id="email"/>
+                                        <input type="text" placeholder={lang === "ESP" ? ESP.Webs.contact.email : ENG.Webs.contact.email} id="email"/>
                                     </div>
                                     <div class="input_field">
-                                        <textarea placeholder="Mensaje" id="message"></textarea>
+                                        <textarea placeholder={lang === "ESP" ? ESP.Webs.contact.message : ENG.Webs.contact.message} id="message"></textarea>
                                     </div>
                                     <div class="btn">
-                                        <input type="submit"/>
+                                        <button type="submit">{lang === "ESP" ? ESP.Webs.contact.send : ENG.Webs.contact.send}</button>
                                     </div>
                                 </form>
                             </div>
@@ -175,15 +182,15 @@ export default function Webs() {
                             transition={{ duration: 0.7, origin: 1 }}
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
-                            <p className="webs-back" onClick={() => setIsOpenTree(!isOpenTree)}>←</p>
-                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Intermedio</p>
+                            <p className="webs-back" onClick={() => setIsOpenTwo(!isOpenTwo)}>←</p>
+                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>{lang === "ESP" ? ESP.Webs.intermediate.label : ENG.Webs.intermediate.label}</p>
                             <ul style={{ listStyle: 'none', fontSize: "20px"}}>
-                                <li>Incorporamos un servidor para que puedas guardar información online.</li>
-                                <li>Mandar mails o notificaciones.</li>
-                                <li>Tu pagina web personal donde subir tus fotos y videos, crear usuarios.</li>
-                                <li>Podés realizar hasta 3 cambios en la pagina durante el mes.</li>
+                                <li>{lang === "ESP" ? ESP.Webs.intermediate.description[1] : ENG.Webs.intermediate.description[1]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.intermediate.description[2] : ENG.Webs.intermediate.description[2]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.intermediate.description[3] : ENG.Webs.intermediate.description[3]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.intermediate.description[4] : ENG.Webs.intermediate.description[4]}</li>
                             </ul>
-                            <h3 style={{ color: "#ffc401"}} > Costo mensual a partir de $1200</h3>
+                            <h3 style={{ color: "#ffc401"}}>{lang === "ESP" ? ESP.Webs.intermediate.price : ENG.Webs.intermediate.price}</h3>
                         </motion.div>
                         <motion.div className="Webs-info"
                             initial={{ width: "0vw", x: "90vw", scale: 1.5 }}
@@ -191,22 +198,22 @@ export default function Webs() {
                             transition={{ duration: 0.9, origin: 1 }}
                         >
                             <div class="wrapper">
-                                <h2>Contact us</h2>
+                                <h2>{lang === "ESP" ? ESP.Webs.contact.title : ENG.Webs.contact.title}</h2>
                                 <div id="error_message">
 
                                 </div>
                                 <form action="" id="myform" onsubmit={()=>validate()}>
                                     <div class="input_field">
-                                        <input type="text" placeholder="Name" id="name"/>
+                                        <input type="text" placeholder={lang === "ESP" ? ESP.Webs.contact.name : ENG.Webs.contact.name} id="name"/>
                                     </div>
                                     <div class="input_field">
-                                        <input type="text" placeholder="Email" id="email"/>
+                                        <input type="text" placeholder={lang === "ESP" ? ESP.Webs.contact.email : ENG.Webs.contact.email} id="email"/>
                                     </div>
                                     <div class="input_field">
-                                        <textarea placeholder="Message" id="message"></textarea>
+                                        <textarea placeholder={lang === "ESP" ? ESP.Webs.contact.message : ENG.Webs.contact.message} id="message"></textarea>
                                     </div>
                                     <div class="btn">
-                                        <input type="submit"/>
+                                        <button type="submit">{lang === "ESP" ? ESP.Webs.contact.send : ENG.Webs.contact.send}</button>
                                     </div>
                                 </form>
                             </div>
@@ -229,14 +236,14 @@ export default function Webs() {
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
                             <p className="webs-back" onClick={() => setIsOpenTree(!isOpenTree)}>←</p>
-                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Avanzado</p>
+                            <p style={{ fontFamily: "Impact", fontSize: "50px"}}>{lang === "ESP" ? ESP.Webs.advanced.label : ENG.Webs.advanced.label}</p>
                             <ul style={{ listStyle: 'none', fontSize: "20px"}}>
-                                <li>Podrás gestionar (material digital, stock de la página) desde un panel de administrador.</li>
-                                <li>Soporte técnito 24/7.</li>
-                                <li>Registro, gestion de privilegios de usuarios (posibilidad de agregar vendedores, encargados, etc).</li>
-                                <li>Con las funcionalidades que tu empresa necesite, no dudes en consultar.</li>
+                                <li>{lang === "ESP" ? ESP.Webs.advanced.description[1] : ENG.Webs.advanced.description[1]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.advanced.description[2] : ENG.Webs.advanced.description[2]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.advanced.description[3] : ENG.Webs.advanced.description[3]}</li>
+                                <li>{lang === "ESP" ? ESP.Webs.advanced.description[4] : ENG.Webs.advanced.description[4]}</li>
                             </ul>
-                            <h3 style={{ color: "#ffc401"}} >Costo mensual a partir de $12000</h3>
+                            <h3 style={{ color: "#ffc401"}} >{lang === "ESP" ? ESP.Webs.advanced.price : ENG.Webs.advanced.price}</h3>
                         </motion.div>
                         
                         <motion.div className="Webs-info"
@@ -245,22 +252,22 @@ export default function Webs() {
                             transition={{ duration: 0.9, origin: 1 }}
                         >
                             <div class="wrapper">
-                                <h2>Contact us</h2>
+                                <h2>{lang === "ESP" ? ESP.Webs.contact.title : ENG.Webs.contact.title}</h2>
                                 <div id="error_message">
 
                                 </div>
                                 <form action="" id="myform" onsubmit={()=>validate()}>
                                     <div class="input_field">
-                                        <input type="text" placeholder="Name" id="name"/>
+                                        <input type="text" placeholder={lang === "ESP" ? ESP.Webs.contact.name : ENG.Webs.contact.name} id="name"/>
                                     </div>
                                     <div class="input_field">
-                                        <input type="text" placeholder="Email" id="email"/>
+                                        <input type="text" placeholder={lang === "ESP" ? ESP.Webs.contact.email : ENG.Webs.contact.email} id="email"/>
                                     </div>
                                     <div class="input_field">
-                                        <textarea placeholder="Message" id="message"></textarea>
+                                        <textarea placeholder={lang === "ESP" ? ESP.Webs.contact.message : ENG.Webs.contact.message} id="message"></textarea>
                                     </div>
                                     <div class="btn">
-                                        <input type="submit"/>
+                                        <button type="submit">{lang === "ESP" ? ESP.Webs.contact.send : ENG.Webs.contact.send}</button>
                                     </div>
                                 </form>
                             </div>
