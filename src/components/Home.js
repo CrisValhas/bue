@@ -6,7 +6,14 @@ import "./styles/Home.css";
 
 import { motion } from 'framer-motion';
 
+// language
+import { useSelector } from "react-redux";
+import { ESP } from "../lang/esp";
+import { ENG } from "../lang/eng";
+
 export default function Home () {
+    const lang = useSelector((state) => state.rootReducer.lang);
+
     return (
         <motion.div className="Home"
 
@@ -16,10 +23,10 @@ export default function Home () {
         >
             {/* NAVEGACIÓN */}
             <div className="home-container">
-                <Link to="/webs" className="home-cards"><div className="home-cardsline"></div><p className="home-cardslabel">Webs</p></Link>
+                <Link to="/webs" className="home-cards"><div className="home-cardsline"></div><p className="home-cardslabel">{lang === "ESP" ? ESP.Home.webs : ENG.Home.webs}</p></Link>
                 <Link to="/BueStore" className="home-cards"><div className="home-cardsline"></div><p className="home-cardslabel">TiendaBue!</p></Link>
-                <Link to="/about" className="home-cards"><div className="home-cardsline"></div><p className="home-cardslabel">Quienes somos</p></Link>
-                <Link to="/projects" className="home-cards"><div className="home-cardsline"></div><p className="home-cardslabel">ProyectosBue!</p></Link>
+                <Link to="/about" className="home-cards"><div className="home-cardsline"></div><p className="home-cardslabel">{lang === "ESP" ? ESP.Home.about : ENG.Home.about}</p></Link>
+                <Link to="/projects" className="home-cards"><div className="home-cardsline"></div><p className="home-cardslabel">{lang === "ESP" ? ESP.Home.projects : ENG.Home.projects}</p></Link>
             </div>
         </motion.div>
     )
