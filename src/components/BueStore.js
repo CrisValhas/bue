@@ -27,7 +27,6 @@ export default function BueStore () {
         <motion.div className="BueStore"
             initial={{ width: "0vw", x: "50vw", opacity: 0, transition: { duration: 1.3 } }}
             animate={{ width: "100vw", x: "0vw", scale: 1, opacity: 1, transition: { duration: 1.3 } }}
-            exit={{ width: "0vw", x: "50vw", opacity: 0, transition: { duration: .3 } }}
         >
 
             <div className="buestore-content">
