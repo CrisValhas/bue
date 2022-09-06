@@ -57,7 +57,10 @@ export default function Webs() {
             exit={{ width: "0vw", x: "50vw", opacity: 0, scale: 0.8, transition: { duration: 0.5 } }}
         >
             <div className="Webs-container">
-                <Link className="Back" to="/">Back</Link>
+                <div className="webs-container-back">
+                    <Link className="webs-back" to="/">←</Link>
+                </div>
+            
                 {/* ------------------------------option 1---------------------------------- */}
 
                 <motion.div onClick={() => setIsOpenOne(!isOpenOne)} className="Webs-options-container"
@@ -121,6 +124,7 @@ export default function Webs() {
                             transition={{ duration: 0.7, origin: 1 }}
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
+                            <p className="webs-back" onClick={() => setIsOpenOne(!isOpenOne)}>←</p>
                             <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Simple</p>
                             <ul style={{ listStyle: 'none', fontSize: "20px"}}>
                                 <li>Elige las tres secciones mas relevantes para tu web.</li>
@@ -130,7 +134,6 @@ export default function Webs() {
                             </ul>
                             <h3 style={{ color: "#ffc401"}} >Sin costo mensual</h3>
                         </motion.div>
-                        <p className="Back" onClick={() => setIsOpenOne(!isOpenOne)}>X</p>
                         <motion.div className="Webs-info"
                             initial={{ width: "0vw", x: "90vw", scale: 1.5 }}
                             animate={{ width: "40%",x:"0", scale: 1 }}
@@ -172,6 +175,7 @@ export default function Webs() {
                             transition={{ duration: 0.7, origin: 1 }}
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
+                            <p className="webs-back" onClick={() => setIsOpenTree(!isOpenTree)}>←</p>
                             <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Intermedio</p>
                             <ul style={{ listStyle: 'none', fontSize: "20px"}}>
                                 <li>Incorporamos un servidor para que puedas guardar información online.</li>
@@ -181,7 +185,6 @@ export default function Webs() {
                             </ul>
                             <h3 style={{ color: "#ffc401"}} > Costo mensual a partir de $1200</h3>
                         </motion.div>
-                        <p className="Back" onClick={() => setIsOpenTwo(!isOpenTwo)}>X</p>
                         <motion.div className="Webs-info"
                             initial={{ width: "0vw", x: "90vw", scale: 1.5 }}
                             animate={{ width: "40%",x:"0", scale: 1 }}
@@ -225,6 +228,7 @@ export default function Webs() {
                             transition={{ duration: 0.7, origin: 1 }}
                             exit={{ width: "0vw", x: "-90vw", scale: 1.5 }}
                         >
+                            <p className="webs-back" onClick={() => setIsOpenTree(!isOpenTree)}>←</p>
                             <p style={{ fontFamily: "Impact", fontSize: "50px"}}>Avanzado</p>
                             <ul style={{ listStyle: 'none', fontSize: "20px"}}>
                                 <li>Podrás gestionar (material digital, stock de la página) desde un panel de administrador.</li>
@@ -234,7 +238,7 @@ export default function Webs() {
                             </ul>
                             <h3 style={{ color: "#ffc401"}} >Costo mensual a partir de $12000</h3>
                         </motion.div>
-                        <p className="Back" onClick={() => setIsOpenTree(!isOpenTree)}>X</p>
+                        
                         <motion.div className="Webs-info"
                             initial={{ width: "0vw", x: "90vw", scale: 1.5 }}
                             animate={{ width: "40%",x:"0", scale: 1 }}

@@ -2,8 +2,10 @@
     height: 65vh;
     display: flex;
     justify-content: center;
+    background: linear-gradient(to bottom, #0167ff, #019AFF);
     align-items: center;
     /* margin: 20px 0; */
+    cursor: default;
 }
 
 .Webs-container {
@@ -15,6 +17,12 @@
     align-items: center;
 }
 
+.webs-container-back {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
 .Webs-options-container {
     width: 80%;
     height: 27%;
@@ -24,6 +32,7 @@
     text-decoration: none;
     font-size: x-large;
     color: #ffc401;
+    background-color: white;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -42,6 +51,7 @@
     text-decoration: none;
     font-size: x-large;
     color: #ffc401;
+    background-color: white;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -93,21 +103,16 @@
     ;
 }
 
-.Back {
-    display: flex;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
+.webs-back {
     text-decoration: none;
     color: white;
-    height: 50px;
-    width: 50px;
-    background-color: #019AFF;
-    border-style: double;
+    font-size: 60px;
 }
 
-.Back:hover {
-    scale: 1.1
+.webs-back:hover {
+    color: #ffc401;
+    scale: 1.3;
+    transition: .5s ease-out;
 }
 
 .Webs-click {
