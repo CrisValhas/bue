@@ -1,9 +1,22 @@
 export const ESP = {
 
     Home: {
-        webs: "Contrata tu web",
-        about: "Quienes somos",
-        projects: "Proyectos",
+        webs: {
+            title: "Contrata tu web",
+            subtitle: "¿Buscando alguien que haga una web por tí?"
+        },
+        store: {
+            title: "TiendaBue!",
+            subtitle: "Crea una tienda para tu emprendimiento... gratis!",
+        },
+        about: {
+            title: "Quienes somos",
+            subtitle: "Conoce un poco más acerca de Bue!"
+        },
+        projects: {
+            title: "Proyectos",
+            subtitle: "Algunos de nuestros proyectos"
+        },
     },
 
     Webs: {

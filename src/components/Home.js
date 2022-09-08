@@ -31,16 +31,15 @@ export default function Home () {
 
                 {/* WEBS */}
                 <Link to="/webs" className="home-cards">
-                <motion.div 
+                    <motion.div 
                         initial={{ width: "0vw", x: "50vw", opacity:0,scale: 0.8,transition:{duration:1.3} }}
                         animate={{ width: "100vw", x: "0vw", scale: 1,opacity:1, transition:{duration:1.3}}}
                         >
                         <img className="home-icon" src={webs} alt="test" />
                     </motion.div>
-                    <div>
-                        <span className="home-cardslabel">{lang === "ESP" ? ESP.Home.webs : ENG.Home.webs}</span>
-                        <br/>
-                        <span className="home-cardsdetail">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                    <div className="home-cards-content">
+                        <span className="home-cardslabel">{lang === "ESP" ? ESP.Home.webs.title : ENG.Home.webs.title}</span>
+                        <span className="home-cardsdetail">{lang === "ESP" ? ESP.Home.webs.subtitle : ENG.Home.webs.subtitle}</span>
                     </div>
                 </Link>
 
@@ -53,10 +52,9 @@ export default function Home () {
 
                         <img className="home-icon" src={store} alt="test" />
                     </motion.div>
-                    <div>
-                        <span className="home-cardslabel">TiendaBue!</span>
-                        <br/>
-                        <span className="home-cardsdetail">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                    <div className="home-cards-content">
+                        <span className="home-cardslabel">{lang === "ESP" ? ESP.Home.store.title : ENG.Home.store.title}</span>
+                        <span className="home-cardsdetail">{lang === "ESP" ? ESP.Home.store.subtitle : ENG.Home.store.subtitle}</span>
                     </div>
                 </Link>
 
@@ -69,10 +67,9 @@ export default function Home () {
 
                         <img className="home-icon" src={about} alt="test" />
                     </motion.div>
-                    <div>
-                        <span className="home-cardslabel">{lang === "ESP" ? ESP.Home.about : ENG.Home.about}</span>
-                        <br/>
-                        <span className="home-cardsdetail">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                    <div className="home-cards-content">
+                        <span className="home-cardslabel">{lang === "ESP" ? ESP.Home.about.title : ENG.Home.about.title}</span>
+                        <span className="home-cardsdetail">{lang === "ESP" ? ESP.Home.about.subtitle : ENG.Home.about.subtitle}</span>
                     </div>
                 </Link>
 
@@ -85,10 +82,9 @@ export default function Home () {
 
                         <img className="home-icon" src={projects} alt="test" />
                     </motion.div>
-                    <div>
-                        <span className="home-cardslabel">{lang === "ESP" ? ESP.Home.projects : ENG.Home.projects}</span>
-                        <br/>
-                        <span className="home-cardsdetail">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                    <div className="home-cards-content">
+                        <span className="home-cardslabel">{lang === "ESP" ? ESP.Home.projects.title : ENG.Home.projects.title}</span>
+                        <span className="home-cardsdetail">{lang === "ESP" ? ESP.Home.projects.subtitle : ENG.Home.projects.subtitle}</span>
                     </div>
                 </Link>
 

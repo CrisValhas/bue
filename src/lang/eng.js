@@ -1,9 +1,22 @@
 export const ENG = {
 
     Home: {
-        webs: "Hire your website",
-        about: "About us",
-        projects: "Projects",
+        webs: {
+            title: "Hire your website",
+            subtitle: "Looking for someone to make a website for you?"
+        },
+        store: {
+            title: "Bue! Store",
+            subtitle: "Create a store for your business... for free!",
+        },
+        about: {
+            title: "About us",
+            subtitle: "Learn a little more about Bue!"
+        },
+        projects: {
+            title: "Projects",
+            subtitle: "Some of our projects"
+        },
     },
 
     Webs: {
