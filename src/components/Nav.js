@@ -28,28 +28,28 @@ export default function Nav () {
                 <div className="nav-container-logo">
                     <img className="nav-logo" src={logo} alt="logo" />
                 </div>
-                
-                <div className="nav-lang">
-                    { isOpen === true ?
-                        <motion.div className="nav-lang-container"
-                            initial={{ width: "0vw", opacity: 0 }}
-                            animate={{ width: "100%", opacity: 1 }}
-                            transition={{ duration: 0.7 }}
-                            exit={{ width: "0vw" }}
-                        >
-                            <ul className="nav-lang-container">
-                                <li className="nav-lang-container-list" onClick={() => dispatch(setLanguage("ESP"))}><span>ESP</span></li>
-                                <li className="nav-lang-container-list" onClick={() => dispatch(setLanguage("ENG"))}><span>ENG</span></li>
-                            </ul>
-                    </motion.div>
-                    :
-                        <div></div>
-                    }
-
-                    <img onClick={() => setOpen(!isOpen)} title="lang" className="nav-lang-icon" src={lang} alt="lang" />      
-                </div>
 
             </motion.div>
+
+            <div className="nav-lang">
+                { isOpen === true ?
+                    <motion.div className="nav-lang-container"
+                        initial={{ width: "0vw", opacity: 0 }}
+                        animate={{ width: "100%", opacity: 1 }}
+                        transition={{ duration: 0.7 }}
+                        exit={{ width: "0vw" }}
+                    >
+                        <ul className="nav-lang-container">
+                            <li className="nav-lang-container-list" onClick={() => dispatch(setLanguage("ESP"))}><span>ESP</span></li>
+                            <li className="nav-lang-container-list" onClick={() => dispatch(setLanguage("ENG"))}><span>ENG</span></li>
+                        </ul>
+                </motion.div>
+                :
+                    <div></div>
+                }
+
+                <img onClick={() => setOpen(!isOpen)} title="lang" className="nav-lang-icon" src={lang} alt="lang" />      
+            </div>
         </nav>
     )
 };
