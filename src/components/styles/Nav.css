@@ -27,9 +27,10 @@
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    width: 12%;
+    width: 163px;
     right: 10px;
     height: 100%;
+    top: 0;
     cursor: pointer;
     overflow: hidden;
     padding: 2px;
