@@ -15,16 +15,52 @@
     width: 100%;
 }
 
+.nav-container-logo {
+    width: 100%;
+}
+
 .nav-logo{
     border-radius: 10px;
 }
 
-.nav-lang-icons {
-    height: 30px;
-    width: 30px;
+.nav-lang {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 12%;
+    right: 10px;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
 }
 
-.nav-lang-icons:hover {
-    border-radius: 50%;
-    border: 1px solid #ffc401;
+.nav-lang-icon {
+    height: 42px;
+    width: 42px;
+}
+
+.nav-lang-icon:hover {
+    scale: 1.1;
+}
+
+.nav-lang-container {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.nav-lang-container-list {
+    background-color: #ffc401;
+    /* color: white; */
+    border-radius: 5px;
+    padding: 4px;
+    font-size: small;
+}
+
+.nav-lang-container-list:hover {
+    scale: 1.08;
 }
