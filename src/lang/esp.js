@@ -57,7 +57,7 @@ export const ESP = {
         box: {
             1: {
                 title: "Personaliza tu tienda",
-                text: "Pon tu logo, combina colores y adapta la web de manera fácil.",
+                text: "Pon tu logo, combina colores y adapta la web facilmente.",
             },
             2: {
                 title: "Gratis para siempre",

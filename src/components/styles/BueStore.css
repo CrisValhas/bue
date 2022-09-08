@@ -7,21 +7,29 @@
     background: linear-gradient(to bottom, #0167ff, #019AFF);
     overflow: hidden;
     cursor: default;
+    
 }
 
 .buestore-content {
     display: flex;
     height: 65vh;
+    width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
+
+
 
 .buestore-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: green; */
-    width: 40%; 
+    justify-content: center;
+    width: 30%; 
+    height: 100%;
+    margin-bottom: 40px;
 }
 
     .buestore-links {
@@ -67,12 +75,15 @@
         transition: .3s ease-out;
     }
 
+
+
 .buestore-boxes {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 30%;
-    gap: 5px;
+    gap: 1rem;
 }
 
     .buestore-box {
@@ -109,6 +120,8 @@
         color: darkgray;
     }
 
+
+
 .buestore-end {
     display: flex;
     flex-direction: column;
@@ -142,3 +155,74 @@
         width: 80%;
         color: white;
     }
+
+
+
+/* #################### MEDIA #################### */
+
+@media (max-width:1120px) {
+    .buestore-content {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 100%;
+        width: 100%;
+        gap: 5rem;
+        justify-content: flex-start;
+    }
+
+    .buestore-description {
+        height: 100%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    .buestore-btn {
+        height: 150px;
+    }
+
+    .buestore-text {
+        width: 80%;
+        height: 100%;
+        margin-bottom: 0px;
+    }
+
+    .buestore-box {
+        width: 300px;
+        align-items: center;
+    }
+
+    .buestore-imgs {
+        height: 50px;
+        width: 50px;
+    }
+
+    .buestore-box-title {
+        font-size: 19px;
+    }
+
+    .buestore-box-label {
+        text-align: left;
+        color: darkgray;
+    }
+
+    .buestore-end {
+        padding-bottom: 50px;
+        width: 80%;
+    }
+
+    .buestore-end-description {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+/* .buestore-content {
+    display: flex;
+    height: 65vh;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+} */
