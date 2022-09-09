@@ -98,7 +98,7 @@ export default function About() {
       initial={{ scale: 0, transition: { duration: 0.1 } }}
       animate={{ x: 0, scale: 1, transition: { duration: 0.7 } }}
     >
-      <div style={{ display: 'flex', justifyContent: 'flex-start', width: '54%', marginBottom: '50px'}}>
+      <div className="About-back" >
         <Link className="buestore-links" to="/">
           ←
         </Link>
@@ -128,7 +128,6 @@ export default function About() {
                     scale: 1,
                     opacity: 0,
                     color: "#ffffff",
-                    fontSize: "35px",
                   }}
                   animate={{
                     width: "100%",
@@ -149,7 +148,7 @@ export default function About() {
                 initial={{
                   fontFamily: "Impact",
                   color: "#ffc401",
-                  fontSize: "50px",
+                 
                   scale: 1,
                 }}
                 animate={{ scale: 1.3 }}
