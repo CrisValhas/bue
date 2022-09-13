@@ -1,0 +1,122 @@
+@import "./vars/vars.scss";
+
+.Home {
+    height: 65vh;
+}
+
+.home-container {
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.home-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    height: 85%;
+    width: 20%;
+    overflow: hidden;
+    transform:scale(1);
+    font-size: x-large;
+    color: white;
+    background-color: $bueBlue;
+    border-radius: 10px;
+}
+
+.home-cards:hover {
+    background-color: $bueYellow;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.home-cards-img {
+    display: flex;
+    align-items: center;
+    height: 50%;
+
+    img {
+        width: 8vw;
+        height: 8vw;
+    }
+}
+
+.home-cards-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+}
+
+.home-cards h1 {
+    font-size: x-large;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0,0,0, 0.9);
+}
+
+.home-cards h2 {
+    display: flex;
+    font-size: 15px;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0,0,0, 0.9);
+}
+
+@media (max-width:900px) {
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .home-cards {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .home-cards img {
+        margin-left: 20px;
+        height: 80px;
+        width: 80px;
+    }
+
+    .home-cards-content {
+        justify-content: center;
+        width: 180%;
+        padding: 15px;
+        margin-right: 25px;
+    }
+
+    .home-cards h1 {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .home-cards h2 {
+        display: flex;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:360px) {
+
+    .home-cards-content {
+        width: 100%;
+    }
+    
+    .home-cards h2 {
+        font-size: 15px;
+        visibility: hidden;
+        position: absolute;
+    }
+}

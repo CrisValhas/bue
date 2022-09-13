@@ -1,13 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import { ESP } from "../lang/esp";
+import { ENG } from "../lang/eng";
+
 export const slice = createSlice({
     name: "rootReducer",
     initialState: {
-        lang: "ESP",
+        lang: ESP,
     },
     reducers: {
         setLanguage(state, action) {
-            state.lang = action.payload;
+            if (action.payload === "ESP") state.lang = ESP;
+            if (action.payload === "ENG") state.lang = ENG;
         },
     },
 });
