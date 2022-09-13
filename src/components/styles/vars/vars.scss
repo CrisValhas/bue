@@ -1,0 +1,31 @@
+// Colors
+$bueBackground: linear-gradient(to bottom, #0167ff, #019AFF); 
+$bueYellow: #ffc401;
+$bueBlue: #019AFF; 
+$bueNightColor: rgb(60, 60, 60);
+$bueLightColor: rgb(255, 255, 255);
+
+
+// Fonts
+$bueFontTitle: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+// ComponentConfig
+@mixin componentConfig($colorBg) {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    background: $colorBg ,$bueBackground ;
+    align-items: center;
+    cursor: default;
+}
+
+// Buttons
+@mixin primaryButtonLight(){
+    width: 200px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 10px;    
+    color: $LightColor;
+    font-size: 20px;
+}

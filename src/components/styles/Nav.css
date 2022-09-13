@@ -29,9 +29,7 @@
     position: fixed;
     width: 163px;
     right: 10px;
-    height: 100%;
     top: 0;
-    cursor: pointer;
     overflow: hidden;
     padding: 2px;
 }
