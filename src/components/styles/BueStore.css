@@ -1,228 +1,204 @@
 .BueStore {
-    display: flex;
-    flex-direction: column;
-    height: 65vh;
-    width: 100%;
-    background-color: #019AFF;
-    background: linear-gradient(to bottom, #0167ff, #019AFF);
-    overflow: hidden;
-    cursor: default;
-    
+  display: flex;
+  flex-direction: column;
+  height: 66vh;
+  width: 100%;
+  background-color: #019AFF;
+  background: linear-gradient(to bottom, #0167ff, #019AFF);
+  overflow: hidden;
+  cursor: default;
 }
 
 .buestore-content {
-    display: flex;
-    height: 65vh;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  height: 65vh;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
-
-
 
 .buestore-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 30%; 
-    height: 100%;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  margin-bottom: 40px;
 }
-
-    .buestore-links {
-        text-decoration: none;
-        color: white;
-        font-size: 60px;
-    }
-
-    .buestore-links:hover {
-        color: #ffc401;
-        scale: 1.3;
-        transition: .5s ease-out;
-    }
-
-    .buestore-title {
-        font-size: 50px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        color: white;
-    }
-
-    .buestore-description {
-        width: 80%;
-        margin-top: 15px;
-        margin-bottom: 30px;
-        color: white;
-        font-size: 15px;
-    }
-
-    .buestore-btn {
-        cursor: pointer;
-        color: white;
-        background-color: #ffc401;
-        text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-        border: none;
-        font-size: 18px;
-        border-radius: 5px;
-        height: 55px;
-        width: 160px;
-    }
-
-    .buestore-btn:hover {
-        scale: 1.2;
-        transition: .3s ease-out;
-    }
-
-
+.buestore-text button {
+  text-decoration: none;
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+}
+.buestore-text button:hover {
+  color: #ffc401;
+  scale: 1.3;
+  transition: 0.5s ease-out;
+}
+.buestore-text h1 {
+  font-size: 50px;
+  font-weight: normal;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  margin: 0px;
+}
+.buestore-text span {
+  font-size: 50px;
+  font-weight: normal;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  margin: 0px;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #ffc401;
+          text-decoration-color: #ffc401;
+}
+.buestore-text p {
+  width: 80%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 15px;
+}
+.buestore-text #bueButton {
+  cursor: pointer;
+  color: white;
+  background-color: #ffc401;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  height: 55px;
+  width: 160px;
+}
+.buestore-text #bueButton:hover {
+  scale: 1.2;
+  transition: 0.3s ease-out;
+}
 
 .buestore-boxes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
 }
-
-    .buestore-box {
-        display: flex;
-        flex-direction: row;
-        background-color: white;
-        justify-content: center;
-        border-radius: 10px;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
-        padding: 11px;
-        height: 100px;
-        width: 400px;
-        gap: 10px;
-    }
-
-    .buestore-imgs {
-        width: 80px;
-        height: 80px;
-    }
-
-    .buestore-box-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-
-    .buestore-box-title {
-        font-size: 22px;
-    }
-
-    .buestore-box-label {
-        text-align: left;
-        color: darkgray;
-    }
-
-
+.buestore-boxes figure {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  padding: 13px;
+  height: 100px;
+  width: 400px;
+  gap: 10px;
+  margin: 5px;
+}
+.buestore-boxes img {
+  width: 70px;
+  height: 70px;
+}
+.buestore-boxes div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.buestore-boxes h1 {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 0;
+}
+.buestore-boxes p {
+  text-align: left;
+  color: darkgray;
+  margin: 0;
+}
 
 .buestore-end {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.buestore-end h1 {
+  font-size: 50px;
+  font-weight: normal;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  margin: 0;
+  margin-bottom: -15px;
+}
+.buestore-end h2 {
+  font-size: 50px;
+  font-weight: normal;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #ffc401;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.buestore-end p {
+  width: 80%;
+  color: white;
+  margin: 0;
+}
+.buestore-end span {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+.buestore-end img {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 1120px) {
+  .buestore-content {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-}
-
-    .buestore-bg-icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 15px;
-    }
-
-    .buestore-bg-img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .buestore-end-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .buestore-end-description {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        color: white;
-    }
-
-
-
-/* #################### MEDIA #################### */
-
-@media (max-width:1120px) {
-    .buestore-content {
-        display: flex;
-        flex-direction: column;
-        overflow-y: scroll;
-        height: 100%;
-        width: 100%;
-        gap: 5rem;
-        justify-content: flex-start;
-    }
-
-    .buestore-description {
-        height: 100%;
-        margin-top: 15px;
-        margin-bottom: 0px;
-    }
-
-    .buestore-btn {
-        height: 150px;
-    }
-
-    .buestore-text {
-        width: 80%;
-        height: 100%;
-        margin-bottom: 0px;
-    }
-
-    .buestore-box {
-        width: 300px;
-        align-items: center;
-    }
-
-    .buestore-imgs {
-        height: 50px;
-        width: 50px;
-    }
-
-    .buestore-box-title {
-        font-size: 19px;
-    }
-
-    .buestore-box-label {
-        text-align: left;
-        color: darkgray;
-    }
-
-    .buestore-end {
-        padding-bottom: 50px;
-        width: 80%;
-    }
-
-    .buestore-end-description {
-        margin-top: 20px;
-        width: 100%;
-    }
-}
-
-/* .buestore-content {
-    display: flex;
-    height: 65vh;
+    overflow-y: scroll;
+    height: 100%;
     width: 100%;
-    flex-direction: row;
-    justify-content: center;
+    gap: 5rem;
+    justify-content: flex-start;
+  }
+  .buestore-text {
+    width: 80%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  .buestore-text p {
+    height: 100%;
+    margin-top: 30px;
+  }
+  .buestore-text #bueButton {
+    height: 150px;
+  }
+  .buestore-boxes figure {
+    width: 270px;
+    height: 130px;
     align-items: center;
-    gap: 2rem;
-} */
+  }
+  .buestore-boxes img {
+    height: 50px;
+    width: 50px;
+  }
+  .buestore-boxes h1 {
+    font-size: 19px;
+  }
+  .buestore-end {
+    padding-bottom: 50px;
+    width: 80%;
+  }
+  .buestore-end h2 {
+    margin-bottom: 20px;
+  }
+  .buestore-end span {
+    margin-top: 40px;
+  }
+}/*# sourceMappingURL=BueStore.css.map */
