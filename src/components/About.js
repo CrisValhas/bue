@@ -32,7 +32,7 @@ function BoxText({ text, drop, arrayToRender }) {
             bottom: 200,
           }}
         >
-          <p className="About-text"> {text} </p>
+          <p> {text} </p>
         </motion.div>
       ) : (
         <motion.div
@@ -46,7 +46,7 @@ function BoxText({ text, drop, arrayToRender }) {
             bottom: 200,
           }}
         >
-          <p className="About-text"> {text} </p>
+          <p> {text} </p>
         </motion.div>
       )}
     </div>
@@ -99,12 +99,10 @@ export default function About() {
       animate={{ x: 0, scale: 1, transition: { duration: 0.7 } }}
     >
       <div className="About-back" >
-        <Link className="buestore-links" to="/">
-          ←
-        </Link>
+        <Link to="/"><button>←</button></Link>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'flex-start', width: '54%'}} onClick={(e) => handleClick(e)}>
+      <div onClick={(e) => handleClick(e)}>
         <motion.div className={"About-dashboard"}>
           {arrayAbout?.map((world, indice) => {
             random = !random;
@@ -119,7 +117,7 @@ export default function About() {
           })}
           <motion.div className={"About-dashboard-text-box"}>
             {drop ? (
-              <motion.div className="About-dashboard-text">
+              <div>
                 <motion.div
                   initial={{
                     fontFamily: "Calibri",
@@ -141,14 +139,13 @@ export default function About() {
                 >
                   {arrayToRender}
                 </motion.div>
-              </motion.div>
+              </div>
             ) : (
               <motion.div
                 className="About-dashboard-text-descubre"
                 initial={{
                   fontFamily: "Impact",
-                  color: "#ffc401",
-                 
+                                   
                   scale: 1,
                 }}
                 animate={{ scale: 1.3 }}
