@@ -116,128 +116,26 @@
         margin-top: -10px;
         }
     }
-
 }
-
 @media (max-width:830px) {
     .About-box p{
         font-size: 30px;
     }
 }
-
-@media (max-width:540px) {
-    .About-back button{
-        font-size: 40px;
-}
-    .About-text {
-        padding: 10px;
-        font-size: 15px;
-        color: #ffffff;
-        font-family: Calibri;
-    }
-    .About-dashboard-text-box {
-        display: flex;
-        width: 97%;
-        height: 60%;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        cursor: pointer;
-    }
-    .About-dashboard-text-descubre {
-        width: 100%;
-        display: flex;
-        border-radius: 3px;
-        align-items: center;
-        color: #ffffff;
-        font-size: 25px;
-        justify-content: center;
-        margin-top: 0px;
-        height: 15vh;
-    }
-    .About-dashboard-text {
-        width: 100%;
-        display: flex;
-        border-radius: 3px;
-        color: #ffffff;
-        font-size: 20px;
-        justify-content: center;
-        align-items: center;
-        height: 15vh;
-        margin-top: 0px;
-    }
-}
 @media (max-width:414px) {
     .About-box p{
-        padding: 3px;
         font-size: 20px;
-        color: #ffffff;
-        font-family: Calibri ;
     }
     .About-dashboard-text-box {
-        display: flex;
-        width: 97%;
-        height: 30%;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto ;
-        cursor: pointer;
-    
-        div {
-            width: 100%;
-            display: flex;
-            border-radius: 3px;
-            color: $bueLightColor;
-            font-size: 20px;
-            justify-content: center;
-            align-items: center;
-            height: 15vh;
-            margin-top: 10px;
-        }
-        .About-dashboard-text-descubre {
-        width: 100%;
-        display: flex;
-        border-radius: 3px;
-        align-items: center;
-        color: $bueYellow;
-        font-size: 25px;
-        justify-content: center;
-        margin-top: 10px;
-        height: 15vh;
-        }
+        height: 40%;
     }
-    .About-back button{
-        font-size: 40px;
-}
 }
 @media (max-width:375px) {
     .About-box p{
-        padding: 3px;
         font-size: 15px;
-        color: #ffffff;
-        font-family: Calibri ;
-    }
-    .About-text {
-        padding: 10px;
-        font-size: 15px;
-        color: #ffffff;
-        font-family: Calibri;
     }
     .About-dashboard-text-box {
-        display: flex;
-        width: 97%;
-        height: 30%;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto ;
-        cursor: pointer;
-    
+        height: 30%;    
         div {
             font-size: 20px;    
             margin-top: 10px;
@@ -246,10 +144,6 @@
          font-size: 25px;     
         margin-top: 10px; 
         }
-    }
-    .About-back button{
-            font-size: 40px;
-            margin-top: 20px;
     }
 }
 
