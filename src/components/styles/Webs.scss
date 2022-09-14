@@ -5,22 +5,12 @@
     display: flex;
     justify-content: center;
     background: linear-gradient(to bottom, #0167ff, #019AFF);
+    background-color: black;
     align-items: center;
     cursor: default;
 
-    a {
-        text-decoration: none;
-        color: white;
-        font-size: 60px;
-        scale: 1;
-        display: flex;
-        cursor: pointer;
-    }
-
-    a:hover {
-        color: #ffc401;
-        scale: 1.02;
-        transition: .5s ease-out;
+    button {
+        @include bueBack();
     }
 
     span {
@@ -34,9 +24,9 @@
     flex-direction: column;
     width: 70%;
     height: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 8px;
     align-items: center;
-    margin-bottom: 15px;
 
     div {
         justify-content: space-around;
@@ -44,7 +34,7 @@
         height: 24%;
         display: flex;
         align-items: center;
-        color: #ffc401;
+        color: $bueYellow;
         background-color: white;
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
@@ -65,8 +55,8 @@
         justify-content: center;
         text-decoration: none;
         overflow: hidden;
-        font-size: 15px;
-        color: #019AFF;
+        font-size: 14px;
+        color: $bueBlue;
     }
 
     h1 {
@@ -76,29 +66,35 @@
     }
 }
 
-.webs-click {
+.webs-absolute {
+    position: absolute;
+    height: 65vh;
+    width: 100%;
+}
+
+.webs-plan {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     width: 100%;
-    height: 65vh;
-    overflow-y: scroll;
-    background: linear-gradient(to bottom, #0167ff, #019AFF);
-    padding: 20px;
-}
-
-.webs-click-cont{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
     height: 100%;
+    overflow-y: scroll;
+    background: $bueBackground;
+    padding: 20px;
+
+    .webs-plan-cont {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.web-text{
+.webs-plan-text{
     width: 40%;
     height: 40vh;
     display: flex;
@@ -115,8 +111,10 @@
         margin-bottom: 0px;
     }
 
-    ul li {
+    ul {
+        padding-left: 0;
         list-style: none;
+        list-style-position: inside;
         color: white;
     }
 
@@ -132,114 +130,44 @@
     background: #fff;
     padding: 15px;
     border-radius: 10px;
-}
-
-
-
-
-
-
-
-
-
-@media (max-width:820px) {
-    .webs-options-back-container{
-        width: 0;
-        height: 0;
-        opacity: 0;
-    }
-    .webs-container {
-        width: 90%;
-    }
-
-    .Webs-options {
-        width: 70%;
-        height: 100%;
-        opacity: 1;
-    }
-
-    .Webs-options-two {
-        width: 70%;
-        height: 100%;
-        opacity: 1;
-    }
-
-}
-@media (max-width:520px) {
-    .webs-container {
-        width: 90%;
-    }
-    .Webs-options-container{
-        justify-content: center;
-    }
-    .Webs-options-two-container{
-        justify-content: center;
-    }
-    .Webs-options {
-        width: 0%;
-        height: 0%;
-        opacity: 0;
-    }
-
-    .Webs-options-two {
-        width: 0%;
-        height: 0%;
-        opacity: 0;
-    }
-
-}
-
-.webs-img {
-    height: 100%;
-    filter: blur(3px);
-}
-
-.Webs-icon {
-
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60%;
-    color: rgb(255, 255, 255);
     overflow: hidden;
-    scale: 0.9;
-    color: #ffc401;
-    ;
-}
 
+    h1 {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 22px;
+        color: $bueBlue;
+    }
 
-.webs-options-back-container{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 60%;
-    height: 15%;
-}
-.webs-back-option{
-    text-decoration: none;
-    color: white;
-    font-size: 60px;
-}
-.webs-back-option:hover{
-    color: #ffc401;
-    scale: 1.5;
-    transition: .5s ease-out;
-}
+    input {
+        border: 1px solid #e0e0e0;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
 
+    textarea {
+        border: 1px solid #e0e0e0;
+        width: 100%;
+        resize: none;
+        height: 80px;
+        overflow-y: scroll;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
 
-.Webs-info {
-    width: 40%;
-    display: flex;
-    height: 100%;
-    color:white;
-    align-items: center;
-    
-}
-.Webs-info-cont{
-    display: flex;
-    width: 100%;
-    height: 65vh;
-    justify-content: space-around;
+    button {
+        @include bueButton();
+        height: 30px;
+    }
+
+    #error {
+        color: red;
+        margin: 0;
+    }
 }
 
 * {
@@ -247,69 +175,18 @@
     outline: none;
 }
 
+@media (max-width:820px) {
 
-
-.webs-contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #019AFF;
-}
-
-.webs-contact .input_field {
-    margin-bottom: 10px;
-}
-
-.webs-contact .input_field input[type="text"],
-.webs-contact textarea {
-    border: 1px solid #e0e0e0;
-    width: 100%;
-    padding: 10px;
-}
-
-.webs-contact textarea {
-    resize: none;
-    height: 80px;
-}
-
-.webs-contact .btn input[type="submit"] {
-    background-color: white;
-    border: 0px;
-    margin-top: 15px;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    background-color: #ffc401;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.webs-contact .btn input[type="submit"]:hover {
-    scale: 1.02;
-    transition: 0.3s;
-}
-
-#error_message {
-    margin-bottom: 20px;
-    background: #fe8b8e;
-    padding: 0px;
-    text-align: center;
-    font-size: 14px;
-    transition: all 0.5s ease;
-}
-
-@media (max-width:1200px) {
-    .Webs-info-cont{
-        align-items: center;
-        flex-direction: column;
+    .webs-container {
+        width: 90%;
     }
-    .Webs-info {
-        width: 100%;
-        scale:0.8
+
+}
+
+@media (max-width:520px) {
+
+    .webs-container {
+        width: 90%;
     }
 
 }

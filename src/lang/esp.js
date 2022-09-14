@@ -54,11 +54,18 @@ export const ESP = {
             },
         },
         contact: {
-            title: "PIDE TU PRESUPUESTO",
+            title: "CONTÁCTANOS",
             name: "Nombre",
-            email: "Email",
-            message: "Mensaje",
+            email: "mi@email.com",
+            message: "Escriba aquí su consulta",
             send: "Enviar",
+            submit: "Su consulta se ha enviado exitosamente",
+            errors: {
+                emptyField: "Rellena todos los campos",
+                name: "Ingresa un nombre válido",
+                email: "Ingresa un mail válido",
+                message: "Escriba su consulta en el mensaje",
+            }
         }
     },
 
