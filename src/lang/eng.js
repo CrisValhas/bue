@@ -54,11 +54,18 @@ export const ENG = {
             },
         },
         contact: {
-            title: "REQUEST YOUR BUDGET",
+            title: "CONTACT US",
             name: "Name",
-            email: "Email",
-            message: "Message",
+            email: "my@email.com",
+            message: "Write your query here",
             send: "Send",
+            submit: "Your query has been sent successfully",
+            errors: {
+                emptyField: "Fill in all the fields",
+                name: "Enter a valid name",
+                email: "Enter a valid email",
+                message: "Write your query in the message",
+            }
         }
     },
 

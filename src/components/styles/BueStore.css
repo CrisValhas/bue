@@ -33,6 +33,8 @@
   color: white;
   font-size: 60px;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 .buestore-text button:hover {
   color: #ffc401;

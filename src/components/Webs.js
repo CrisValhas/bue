@@ -11,7 +11,6 @@ function Contact() {
         name: "",
         email: "",
         message: "",
-        error: "",
     });
 
     const handleChange = e => {
@@ -24,16 +23,16 @@ function Contact() {
     const validate = e => {
         e.preventDefault(e);
 
-        if (!state.name || !state.email || !state.message) alert('Rellena todos los campos');
+        if (!state.name || !state.email || !state.message) alert(lang.Webs.contact.errors.emptyField);
 
-        if (state.name.length < 5) {
-            setState({...state, error: "Please enter valid name"})
+        if (state.name.length < 2) {
+            alert(lang.Webs.contact.errors.name)
         } else if (state.email.indexOf("@") === -1 || state.email.length < 6) {
-            setState({...state, error: "Please enter valid email"})
+            alert(lang.Webs.contact.errors.email)
         } else if (state.message.length < 15) {
-            setState({...state, error: "Please describe what you want in the message"})
+            alert(lang.Webs.contact.errors.message)
         } else {
-            alert("Form submitted successfully!");
+            alert(lang.Webs.contact.submit);
 
             // -----------> se manda el mail
 
@@ -41,29 +40,22 @@ function Contact() {
                 name: "",
                 email: "",
                 message: "",
-                error: "",
             });
-        } 
+        }
     };
 
     return (
         <div className="webs-contact">
-            <h2>{lang.Webs.contact.title}</h2>
-            <div id="error_message">{state.error}</div>
+            <h1>{lang.Webs.contact.title}</h1>
 
-            <form id="myform" onSubmit={validate}>
-                <div className="input_field">
-                    <input required type="text" placeholder={lang.Webs.contact.name} name="name" value={state.name} onChange={handleChange} />
-                </div>
-                <div className="input_field">
-                    <input required type="text" placeholder={lang.Webs.contact.email} name="email" value={state.email} onChange={handleChange} />
-                </div>
-                <div className="input_field">
-                    <textarea required placeholder={lang.Webs.contact.message} name="message" value={state.message} onChange={handleChange} ></textarea>
-                </div>
-                <div className="btn">
-                    <button>{lang.Webs.contact.send}</button>
-                </div>
+            <form onSubmit={validate}>
+                <input required type="text" placeholder={lang.Webs.contact.name} name="name" value={state.name} onChange={handleChange} />
+                
+                <input required type="text" placeholder={lang.Webs.contact.email} name="email" value={state.email} onChange={handleChange} />
+                
+                <textarea required placeholder={lang.Webs.contact.message} name="message" value={state.message} onChange={handleChange} />
+                
+                <button>{lang.Webs.contact.send}</button>
             </form>
         </div>
     )
@@ -80,8 +72,8 @@ export default function Webs() {
         <motion.div className="Webs" initial={{ opacity: 0.5, transition: { duration: 1 } }} animate={{ scale: 1, opacity: 1, transition: { duration: 1 } }} >
             
            <div className="webs-container">
-                <Link to="/"><a href="#">←</a></Link>
-
+                <Link to="/"><button>←</button></Link>
+                
                 <div onClick={() => setIsOpenOne(!isOpenOne)}>
                     <p>{lang.Webs.simple.text}</p>
                     <h1>{lang.Webs.simple.label}</h1>
@@ -99,64 +91,70 @@ export default function Webs() {
             </div>
 
             { isOpenOne &&
-                <div className="webs-click">
-                    <a href="#" onClick={() => setIsOpenOne(!isOpenOne)}>←</a>
+                <div className="webs-absolute">
+                    <div className="webs-plan">
+                        <button onClick={() => setIsOpenOne(!isOpenOne)}>←</button>
 
-                    <div className="webs-click-cont">
-                        <div className="web-text">
-                            <h1>{lang.Webs.simple.label}</h1>
-                            <ul>
-                                <li>{lang.Webs.simple.description[1]}</li>
-                                <li>{lang.Webs.simple.description[2]}</li>
-                                <li>{lang.Webs.simple.description[3]}</li>
-                                <li>{lang.Webs.simple.description[4]}</li>
-                            </ul>
-                            <h3>{lang.Webs.simple.description.price}</h3>
+                        <div className="webs-plan-cont">
+                            <div className="webs-plan-text">
+                                <h1>{lang.Webs.simple.label}</h1>
+                                <ul>
+                                    <li>{lang.Webs.simple.description[1]}</li>
+                                    <li>{lang.Webs.simple.description[2]}</li>
+                                    <li>{lang.Webs.simple.description[3]}</li>
+                                    <li>{lang.Webs.simple.description[4]}</li>
+                                </ul>
+                                <h3>{lang.Webs.simple.description.price}</h3>
+                            </div>
+
+                            <Contact />
                         </div>
-
-                        <Contact />
                     </div>
                 </div>
             }
 
             { isOpenTwo &&
-                <div className="webs-click">
-                    <a href="#" onClick={() => setIsOpenTwo(!isOpenTwo)}>←</a>
+                <div className="webs-absolute">
+                    <div className="webs-plan">
+                        <button onClick={() => setIsOpenTwo(!isOpenTwo)}>←</button>
 
-                    <div className="webs-click-cont">
-                        <div className="web-text">
-                            <h1>{lang.Webs.intermediate.label}</h1>
-                            <ul>
-                                <li>{lang.Webs.intermediate.description[1]}</li>
-                                <li>{lang.Webs.intermediate.description[2]}</li>
-                                <li>{lang.Webs.intermediate.description[3]}</li>
-                                <li>{lang.Webs.intermediate.description[4]}</li>
-                            </ul>
-                            <h3>{lang.Webs.intermediate.description.price}</h3>
+                        <div className="webs-plan-cont">
+                            <div className="webs-plan-text">
+                                <h1>{lang.Webs.intermediate.label}</h1>
+                                <ul>
+                                    <li>{lang.Webs.intermediate.description[1]}</li>
+                                    <li>{lang.Webs.intermediate.description[2]}</li>
+                                    <li>{lang.Webs.intermediate.description[3]}</li>
+                                    <li>{lang.Webs.intermediate.description[4]}</li>
+                                </ul>
+                                <h3>{lang.Webs.intermediate.description.price}</h3>
+                            </div>
+
+                            <Contact />
                         </div>
-
-                        <Contact />
                     </div>
                 </div>
             }
 
             { isOpenThree &&
-                <div className="webs-click">
-                    <a href="#" onClick={() => setIsOpenThree(!isOpenThree)}>←</a>
+                <div className="webs-absolute">
+                    <div className="webs-plan">
+                        <button onClick={() => setIsOpenThree(!isOpenThree)}>←</button>
 
-                    <div className="webs-click-cont">
-                        <div className="web-text">
-                            <h1>{lang.Webs.advanced.label}</h1>
-                            <ul>
-                                <li>{lang.Webs.advanced.description[1]}</li>
-                                <li>{lang.Webs.advanced.description[2]}</li>
-                                <li>{lang.Webs.advanced.description[3]}</li>
-                                <li>{lang.Webs.advanced.description[4]}</li>
-                            </ul>
-                            <h3>{lang.Webs.advanced.description.price}</h3>
+                        <div className="webs-plan-cont">
+                            <div className="webs-plan-text">
+                                <h1>{lang.Webs.advanced.label}</h1>
+                                <ul>
+                                    <li>{lang.Webs.advanced.description[1]}</li>
+                                    <li>{lang.Webs.advanced.description[2]}</li>
+                                    <li>{lang.Webs.advanced.description[3]}</li>
+                                    <li>{lang.Webs.advanced.description[4]}</li>
+                                </ul>
+                                <h3>{lang.Webs.advanced.description.price}</h3>
+                            </div>
+
+                            <Contact />
                         </div>
-
-                        <Contact />
                     </div>
                 </div>
             }
