@@ -73,7 +73,7 @@ export default function Webs() {
             
            <div className="webs-container">
                 <Link to="/"><button>←</button></Link>
-
+                
                 <div onClick={() => setIsOpenOne(!isOpenOne)}>
                     <p>{lang.Webs.simple.text}</p>
                     <h1>{lang.Webs.simple.label}</h1>

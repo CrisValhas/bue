@@ -180,13 +180,23 @@
   outline: none;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 960px) {
   .webs-container {
-    width: 90%;
+    width: 100%;
   }
 }
-@media (max-width: 520px) {
-  .webs-container {
+@media (max-width: 640px) {
+  .webs-container button {
+    font-size: 30px;
+  }
+  .webs-container div {
+    height: 28%;
+  }
+  .webs-container p {
+    font-size: 10px;
     width: 90%;
+  }
+  .webs-container h1 {
+    margin: 0;
   }
 }/*# sourceMappingURL=Webs.css.map */
