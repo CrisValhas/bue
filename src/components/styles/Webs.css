@@ -199,4 +199,16 @@
   .webs-container h1 {
     margin: 0;
   }
+  .webs-plan .webs-plan-cont {
+    flex-direction: column;
+    margin-top: 70px;
+    height: 600px;
+    width: 800px;
+  }
+  .webs-plan-text {
+    margin-bottom: 10px;
+  }
+  .webs-plan-text h3 {
+    margin-top: -10px;
+  }
 }/*# sourceMappingURL=Webs.css.map */
